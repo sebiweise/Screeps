@@ -29,6 +29,21 @@ module.exports.loop = function () {
 
     // for each spawn
     for (let spawnName in Game.spawns) {
+        var currentSpawn = Game.spawns[spawnName];
+        //ENV setup
+        if (!currentSpawn.memory.minCreeps) {
+            console.log("Setup ENV");
+            currentSpawn.memory.minCreeps = {
+                harvester: 1,
+                builder: 1,
+                repairer: 1,
+                upgrader: 1,
+                lorry: 1,
+                claimer: 0,
+                wallRepairer: 1,
+                longDistanceHarvester: 0
+            };
+        }
         // run spawn logic
         Game.spawns[spawnName].spawnCreepsIfNecessary();
     }

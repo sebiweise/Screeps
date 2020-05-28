@@ -72,8 +72,7 @@ StructureSpawn.prototype.spawnCreepsIfNecessary =
                     }
                 }
                 // if no claim order was found, check other roles
-                else if (this.memory.hasOwnProperty(this.memory.minCreeps) && this.memory.hasOwnProperty(this.memory.minCreeps[role])
-                    && numberOfCreeps[role] < this.memory.minCreeps[role]) {
+                else if (numberOfCreeps[role] < this.memory.minCreeps[role]) {
                     if (role == 'lorry') {
                         name = this.createLorry(150);
                     }
@@ -90,7 +89,7 @@ StructureSpawn.prototype.spawnCreepsIfNecessary =
         let numberOfLongDistanceHarvesters = {};
         if (name == undefined) {
             // count the number of long distance harvesters globally
-            for (let roomName in this.memory.minLongDistanceHarvesters) {
+            for (let roomName in this.memory.minCreeps['longDistanceHarvester']) {
                 numberOfLongDistanceHarvesters[roomName] = _.sum(Game.creeps, (c) =>
                     c.memory.role == 'longDistanceHarvester' && c.memory.target == roomName)
 
