@@ -13,8 +13,10 @@ var roles = {
 Creep.prototype.runRole =
     function () {
         var role = roles[this.memory.role];
-        if (role) {
+        if(role){
             role.run(this);
+        }else{
+            console.log('ROLE undefined!');
         }
     };
 
