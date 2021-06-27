@@ -2,6 +2,7 @@
 ![Maintenance](https://img.shields.io/maintenance/yes/2021)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/sebiweise/Screeps)
 ![GitHub last commit](https://img.shields.io/github/last-commit/sebiweise/Screeps)
+[![CodeFactor](https://www.codefactor.io/repository/github/sebiweise/screeps/badge)](https://www.codefactor.io/repository/github/sebiweise/screeps)
 
 # Screeps custom Code
 
