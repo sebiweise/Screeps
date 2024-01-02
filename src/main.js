@@ -36,11 +36,11 @@ module.exports.loop = function () {
             currentSpawn.memory.minCreeps = {
                 harvester: 1,
                 builder: 1,
-                repairer: 1,
-                upgrader: 1,
-                lorry: 1,
+                repairer: 0,
+                upgrader: 0,
+                lorry: 0,
                 claimer: 0,
-                wallRepairer: 1,
+                wallRepairer: 0,
                 longDistanceHarvester: 0
             };
         }
